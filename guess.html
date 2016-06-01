@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript">
+
+
+
+function checkAnswers(){
+userAnswer = document.getElementById("chislo").value;
+var answer=42;
+var tryCout=0;
+if (userAnswer < 1 || userAnswer > 100)
+	{
+		alert ('Ну я же просил число от 1 до 100');
+		tryCout++;
+	}
+ 
+    else if(answer==userAnswer)
+    {
+    	tryCout++;
+    	alert('Вы угадали, вам понадобилось '+ tryCout +' попыток');
+    }
+    else if(userAnswer>answer)
+    {
+    	alert('Ваше число слишком большое');
+    	tryCout++;
+    }
+    else if (userAnswer<answer) 
+    {
+    	alert('Ваше число слишком маленьколе');
+    	tryCout++;
+    } 
+}
+
+</script>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guess-2.html">Угадайка - 2 игрока</a></li>			
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Угадайка</h2>
+	</div>
+	<div id="content">
+	<h3>Угадай число от 1 до 100!</h3>
+
+	<p>Введите число</p>
+	<input type="text" id="chislo"/>
+	</br></br></br>
+
+	<input type="button" value="Ответить" onclick="checkAnswers()" />	
+	</div>
+           
+    <div id="tooplate_footer">    
+        </a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>

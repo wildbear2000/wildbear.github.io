@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+
+<script type="text/javascript">
+
+
+
+function checkAnswers(){
+userAnswer1 = document.getElementById("chislo1").value;
+userAnswer2 = document.getElementById("chislo2").value;
+var answer=42;
+var tryCout1=0;
+var tryCout2=0;
+if (userAnswer1 < 1 || userAnswer1 > 100)
+	{
+		alert ('Ну я же просил число от 1 до 100');
+		tryCout1++;
+	}
+ 
+    else if(answer==userAnswer1)
+    {
+    	tryCout1++;
+    	alert('1 игрок победил, ему понадобилось '+ tryCout1 +' попыток');
+    }
+    else if(userAnswer1>answer)
+    {
+    	alert('1 игрок, ваше число слишком большое');
+    	tryCou1++;
+    }
+    else if (userAnswer1<answer) 
+    {
+    	alert('1 игрок, ваше число слишком маленьколе');
+    	tryCout1++;
+    } 
+
+
+    if (userAnswer2 < 1 || userAnswer2 > 100)
+	{
+		alert ('Ну я же просил число от 1 до 100');
+		tryCout2++;
+	}
+ 
+    else if(answer==userAnswer2)
+    {
+    	tryCout2++;
+    	alert('2 игрок победил, ему понадобилось '+ tryCout2 +' попыток');
+    }
+    else if(userAnswer2>answer)
+    {
+    	alert('2 игрок, ваше число слишком большое');
+    	tryCout2++;
+    }
+    else if (userAnswer2<answer) 
+    {
+    	alert('2 игрок, ваше число слишком маленьколе');
+    	tryCout2++;
+    } 
+
+      if (answer==userAnswer1 && answer==userAnswer2)
+    {
+     alert('Ничья!');
+    }
+}
+
+</script>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guess-2.html">Угадайка - 2 игрока</a></li>			
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Угадайка - 2 игрока</h2>
+	</div>
+	<div id="content">
+	<h3>Угадай число от 1 до 100!</h3>
+
+	<p>1 игрок, введите число</p>
+	<input type="text" id="chislo1"/>
+	</br></br></br>
+
+    <p>2 игрок, введите число</p>
+    <input type="text" id="chislo2"/>
+    </br></br></br>
+
+    <input type="button" value="Ответить" onclick="checkAnswers()" />
+    </div>
+</div>
+    <div id="tooplate_footer">    
+        </a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>
